@@ -1,0 +1,13 @@
+.vs/
+builds/
+bin/
+data/
+test/
+Debug/
+Release/
+out/
+*.VC.db
+*.suo
+*.zip
+*.user
+*.diagsession

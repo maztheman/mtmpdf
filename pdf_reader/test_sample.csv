@@ -1,0 +1,167 @@
+"Trade","Coverage","Item #","Description","Quantity","Unit Price","Tax","O & P","RCV","Depreciation","ACV"
+
+"________","DWELLING","1","Single axle dump truck - per load - including dump fees","1.00","263.82","0.00","52.76","316.58","(0.00)","316.58"
+"________","DWELLING","2","Taxes, insurance, permits & fees (Bid Item)","1.00","192.00","0.00","38.40","230.40","(0.00)","230.40"
+"________","DWELLING","","Dwelling Totals:","","","0.00","91.16","546.98","","546.98"
+
+
+"Roof11","DWELLING","3","Remove 3 tab - 20 yr. - composition shingle roofing - incl. felt","13.50","49.03","0.00","132.38","794.29","(0.00)","794.29"
+"Roof11","DWELLING","4","Remove Add. layer of comp. shingles, remove & disp. - 3 tab","13.50","31.38","0.00","84.72","508.35","(0.00)","508.35"
+"Roof11","DWELLING","5","3 tab - 25 yr. - comp. shingle roofing - w/out felt","15.67","184.84","","599.34","","(0.00)",""
+"Roof11","DWELLING","6","Roofing felt - 15 lb.","8.14","27.99","4.07","46.38","278.29","(0.00)","278.29"
+"Roof11","DWELLING","7","R&R Drip edge","178.84","2.26","8.58","82.56","495.32","(0.00)","495.32"
+"Roof11","DWELLING","8","Digital satellite system - Detach & reset","1.00","36.26","0.00","7.26","43.52","(0.00)","43.52"
+"Roof11","DWELLING","9","Flashing - pipe jack - split boot","1.00","63.09","2.49","13.12","78.70","(0.00)","78.70"
+"Roof11","DWELLING","10","Flashing - pipe jack","3.00","34.13","1.64","20.80","124.83","(0.00)","124.83"
+"Roof11","DWELLING","11","Roof vent - turtle type - Metal","11.00","50.17","11.89","112.76","676.52","(0.00)","676.52"
+"Roof11","DWELLING","12","R&R Roof vent - off ridge type - 4'","1.00","105.37","2.20","21.50","129.07","(0.00)","129.07"
+"Roof11","DWELLING","13","R&R Rain cap - 4" to 5"","1.00","33.69","1.09","6.96","41.74","(0.00)","41.74"
+"Roof11","DWELLING","14","R&R Rain cap - 8"","1.00","52.04","2.21","10.86","65.11","(0.00)","65.11"
+"Roof11","DWELLING","15","R&R Gutter / downspout - galvanized - up to 5"","178.84","5.28","21.06","193.08","","(0.00)",""
+"Roof11","DWELLING","16","Ice & water shield","536.52","1.65","15.29","180.12","","(0.00)",""
+"Roof11","DWELLING","17","Television antenna - Detach & reset","1.00","89.66","0.00","17.94","107.60","(0.00)","107.60"
+"Roof11","DWELLING","18","Sheathing - plywood - 1/2" CDX","1349.72","1.87","68.84","518.56","","(0.00)",""
+"Roof11","DWELLING","19","Starter eave vent - shingle-over style part of ventilation code","178.84","8.07","48.15","298.28","","(0.00)",""
+
+
+"Flat Roof","DWELLING","20","Remove Roll roofing","0.75","38.03","0.00","5.70","34.22","(0.00)","34.22"
+"Flat Roof","DWELLING","21","Roll roofing","0.75","119.44","3.50","18.62","111.70","(0.00)","111.70"
+"Flat Roof","DWELLING","22","Sheathing - plywood - 1/2" CDX","75.19","1.87","3.83","28.88","173.32","(0.00)","173.32"
+"Flat Roof","DWELLING","23","Ice & water shield","75.19","1.65","2.14","25.24","151.44","(0.00)","151.44"
+"Flat Roof","DWELLING","","Dwelling Totals:","","","9.47","78.44","470.68","","470.68"
+"Flat Roof","DWELLING","","Totals:  Flat Roof","","","9.47","78.44","470.68","0.00","470.68"
+
+
+"Awning Roofs","DWELLING","24","R&R Patio Cover - Roof panels only - Heavy load","162.75","8.44","53.46","285.42","","(798.65)","913.84"
+"Awning Roofs","DWELLING","25","R&R Flashing, 20" wide","39.25","4.05","4.09","32.62","195.68","(73.56)","122.12"
+"Awning Roofs","DWELLING","","Dwelling Totals:","","","57.55","318.04","","(872.21)",""
+"Awning Roofs","DWELLING","","Totals:  Awning Roofs","","","57.55","318.04","","872.21",""
+
+
+"Garage Roof","OTHER STRUCTURES","26","Remove Laminated - comp. shingle rfg. - w/ felt","5.14","51.30","0.00","52.74","316.42","(0.00)","316.42"
+"Garage Roof","OTHER STRUCTURES","27","Roofing felt - 15 lb.","5.14","27.99","2.57","29.30","175.74","(17.59)","158.15"
+"Garage Roof","OTHER STRUCTURES","28","Laminated - comp. shingle rfg. - w/out felt","5.67","200.00","41.88","235.18","","(94.07)",""
+"Garage Roof","OTHER STRUCTURES","29","Flashing - pipe jack","1.00","34.13","0.55","6.94","41.62","(2.38)","39.24"
+"Garage Roof","OTHER STRUCTURES","30","Prime & paint roof jack","1.00","27.33","0.53","5.56","33.42","(4.45)","28.97"
+"Garage Roof","OTHER STRUCTURES","31","R&R Drip edge","90.93","2.26","4.37","41.98","251.85","(12.64)","239.21"
+"Garage Roof","OTHER STRUCTURES","32","Step flashing","8.00","8.79","0.98","14.26","85.56","(4.90)","80.66"
+"Garage Roof","OTHER STRUCTURES","33","Rain cap - 8"","1.00","47.77","2.21","10.00","59.98","(3.44)","56.54"
+"Garage Roof","OTHER STRUCTURES","","Other Structures Totals:","","","53.09","395.96","","(139.47)",""
+"Garage Roof","OTHER STRUCTURES","","Totals:  Garage Roof","","","53.09","395.96","","139.47",""
+
+
+"Mod Bit Garage Roof","OTHER STRUCTURES","34","R&R Modified bitumen roof","3.34","384.61","24.03","261.72","","(139.22)",""
+"Mod Bit Garage Roof","OTHER STRUCTURES","","Other Structures Totals:","","","24.03","261.72","","(139.22)",""
+"Mod Bit Garage Roof","OTHER STRUCTURES","","Totals:  Mod Bit Garage Roof","","","24.03","261.72","","139.22",""
+"Mod Bit Garage Roof","OTHER STRUCTURES","","Area Dwelling Total:","","","","","","(872.21)",""
+"Mod Bit Garage Roof","OTHER STRUCTURES","","Area Other Structures Total:","","","77.12","657.68","","(278.69)",""
+
+
+"Electrical","DWELLING - CODE UPGRADE","35","Electrical (Specialized Electric Company) This item did not previously exist or expands the scope of repairs, but is required by current building codes. The code upgrade cost is payable when incurred, subject to limits.","1.00","","0.00","0.00","","(0.00)",""
+"Electrical","DWELLING - CODE UPGRADE","","Dwelling - Code Upgrade Totals:","","","0.00","0.00","0.00","","0.00"
+"Electrical","DWELLING - CODE UPGRADE","","Totals:  Electrical","","","0.00","0.00","0.00","0.00","0.00"
+
+
+"Front Elevation","DWELLING","36","R&R House wrap (air/moisture barrier)","299.19","0.35","3.37","21.64","129.73","(11.54)","118.19"
+"Front Elevation","DWELLING","37","R&R Siding - aluminum (.024 thickness)","299.19","5.95","69.34","369.90","","(621.65)",""
+"Front Elevation","DWELLING","38","Prime & paint metal siding","299.19","0.70","5.61","43.00","258.04","(232.24)","25.80"
+"Front Elevation","DWELLING","39","Exterior light fixture - Detach & reset","1.00","64.01","0.00","12.80","76.81","(0.00)","76.81"
+"Front Elevation","DWELLING","40","Shutters - Detach & reset","3.00","30.61","0.00","18.36","110.19","(0.00)","110.19"
+"Front Elevation","DWELLING","41","Detach & Reset Wall mount mailbox Detach mailbox from siding. Once siding is replaced. Attach the mailbox back to the siding. Detach mailbox from siding. Once siding is replaced. Attach the mailbox back to the siding.","1.00","26.54","0.00","5.30","31.84","(0.00)","31.84"
+"Front Elevation","DWELLING","42","Lighted house numbers - Detach & reset","4.00","47.21","0.00","37.76","226.60","(0.00)","226.60"
+"Front Elevation","DWELLING","43","Seal & paint window shutters - per side (set)","4.00","24.41","1.46","19.82","118.92","(0.00)","118.92"
+"Front Elevation","DWELLING","44","R&R Window screen, 1 - 9 SF","2.00","40.40","4.98","17.16","102.94","(0.00)","102.94"
+"Front Elevation","DWELLING","45","Seal & paint trim - two coats","24.50","1.06","0.18","5.24","31.39","(0.00)","31.39"
+"Front Elevation","DWELLING","46","Seal & paint window sill","5.17","1.92","0.09","2.00","12.02","(0.00)","12.02"
+"Front Elevation","DWELLING","47","R&R Lattice work","10.75","4.25","1.92","9.52","57.13","(0.00)","57.13"
+"Front Elevation","DWELLING","48","Siding Installer - per hour detach and reset items on the siding for siding replacement.","4.00","86.10","0.00","68.88","413.28","(0.00)","413.28"
+"Front Elevation","DWELLING","49","Prime & paint exterior fascia - wood, 4"- 6" wide","36.58","1.28","0.44","9.44","56.70","(0.00)","56.70"
+"Front Elevation","DWELLING","50","Reglaze window, 1 - 9 sf","1.00","70.34","2.97","14.66","87.97","(0.00)","87.97"
+"Front Elevation","DWELLING","51","Content Manipulation charge - per hour remove and reset contents while siding is being replaced.","2.00","42.49","0.00","17.00","101.98","(0.00)","101.98"
+"Front Elevation","DWELLING","52","R&R Wrap wood post with aluminum (PER LF)","1.00","14.49","0.15","2.94","17.58","(0.00)","17.58"
+"Front Elevation","DWELLING","53","R&R Window screen, 10 - 16 SF","2.00","51.67","6.68","22.02","132.04","(0.00)","132.04"
+
+
+"Left Elevation","DWELLING","54","R&R House wrap (air/moisture barrier)","210.17","0.35","2.36","15.20","91.12","(8.12)","83.00"
+"Left Elevation","DWELLING","55","R&R Siding - aluminum (.024 thickness)","210.17","5.95","48.71","259.84","","(436.69)",""
+"Left Elevation","DWELLING","56","Prime & paint metal siding","210.17","0.70","3.94","30.20","181.26","(163.14)","18.12"
+"Left Elevation","DWELLING","57","Prime & paint exterior fascia - wood, 4"- 6" wide","42.25","1.28","0.51","10.92","65.51","(0.00)","65.51"
+"Left Elevation","DWELLING","58","R&R Wrap wood window frame & trim with aluminum sheet - Small","1.00","126.67","1.80","25.70","154.17","(0.00)","154.17"
+"Left Elevation","DWELLING","59","Seal & paint trim - two coats paint window wrap","12.00","1.06","0.09","2.56","15.37","(0.00)","15.37"
+"Left Elevation","DWELLING","60","Seal & paint window sill","2.00","1.92","0.03","0.76","4.63","(0.00)","4.63"
+"Left Elevation","DWELLING","61","R&R Window screen, 1 - 9 SF","1.00","40.40","2.49","8.58","51.47","(0.00)","51.47"
+"Left Elevation","DWELLING","","Dwelling Totals:","","","59.93","353.76","","(607.95)",""
+
+
+"Right Elevation","DWELLING","62","R&R House wrap (air/moisture barrier)","257.54","0.35","2.90","18.60","111.64","(9.93)","101.71"
+"Right Elevation","DWELLING","63","R&R Siding - aluminum (.024 thickness)","257.54","5.95","59.69","318.42","","(535.12)",""
+"Right Elevation","DWELLING","64","Prime & paint metal siding","257.54","0.70","4.83","37.02","222.13","(199.92)","22.21"
+"Right Elevation","DWELLING","65","Seal & paint window sill","8.00","1.92","0.13","3.10","18.59","(0.00)","18.59"
+"Right Elevation","DWELLING","66","Prime & paint exterior fascia - wood, 4"- 6" wide","33.67","1.28","0.40","8.70","52.20","(0.00)","52.20"
+"Right Elevation","DWELLING","67","Seal & paint trim - two coats","46.00","1.06","0.35","9.84","58.95","(0.00)","58.95"
+"Right Elevation","DWELLING","68","Paint trim - one coat paint window wraps.","46.00","0.72","0.28","6.68","40.08","(0.00)","40.08"
+"Right Elevation","DWELLING","69","R&R Window screen, 10 - 16 SF","1.00","51.67","3.34","10.98","65.99","(0.00)","65.99"
+"Right Elevation","DWELLING","70","R&R Wrap wood post with aluminum","3.00","14.49","0.44","8.78","52.69","(0.00)","52.69"
+"Right Elevation","DWELLING","","Dwelling Totals:","","","72.36","422.12","","(744.97)",""
+
+
+"Rear Elevation","DWELLING","71","R&R House wrap (air/moisture barrier)","309.27","0.35","3.48","22.36","134.08","(11.92)","122.16"
+"Rear Elevation","DWELLING","72","R&R Siding - aluminum (.024 thickness)","309.27","5.95","71.67","382.38","","(642.61)",""
+"Rear Elevation","DWELLING","73","Prime & paint metal siding","309.27","0.70","5.80","44.46","266.75","(240.08)","26.67"
+"Rear Elevation","DWELLING","74","R&R Window screen, 1 - 9 SF","1.00","40.40","2.49","8.58","51.47","(23.82)","27.65"
+"Rear Elevation","DWELLING","75","R&R Window screen, 10 - 16 SF","3.00","51.67","10.01","33.00","198.02","(93.21)","104.81"
+"Rear Elevation","DWELLING","76","Detach & Reset Exterior light fixture","1.00","64.01","0.00","12.80","76.81","(0.00)","76.81"
+"Rear Elevation","DWELLING","77","Paint door/window trim & jamb - 1 coat (per side)","5.00","15.91","1.08","16.14","96.77","(87.09)","9.68"
+"Rear Elevation","DWELLING","78","Prime & paint exterior fascia - wood, 4"- 6" wide","49.17","1.28","0.59","12.70","76.23","(0.00)","76.23"
+"Rear Elevation","DWELLING","79","Seal & paint trim - two coats","45.50","1.06","0.34","9.70","58.27","(0.00)","58.27"
+"Rear Elevation","DWELLING","80","Seal & paint window sill","8.00","1.92","0.13","3.10","18.59","(0.00)","18.59"
+"Rear Elevation","DWELLING","81","R&R Wrap wood window frame & trim with aluminum sheet","1.00","193.93","2.69","39.32","235.94","(0.00)","235.94"
+"Rear Elevation","DWELLING","82","R&R Wrap wood post with aluminum (PER LF)","3.00","14.49","0.44","8.78","52.69","(0.00)","52.69"
+"Rear Elevation","DWELLING","83","Content Manipulation charge - per hour","1.50","42.49","0.00","12.74","76.48","(0.00)","76.48"
+"Rear Elevation","DWELLING","","Dwelling Totals:","","","98.72","606.06","","",""
+
+
+"Gutters","DWELLING","84","R&R Gutter / downspout - aluminum - up to 5"","229.00","5.79","35.72","272.32","","(0.00)",""
+"Gutters","DWELLING","85","Prime & paint gutter / downspout","229.00","1.26","4.12","58.52","351.18","(0.00)","351.18"
+
+
+"HVAC","DWELLING","86","Comb and straighten a/c condenser fins - with trip charge","1.00","210.33","0.00","42.06","252.39","(0.00)","252.39"
+"HVAC","DWELLING","87","HVAC Technician - per hour hvac rep had to install the furnace caps.","2.00","120.10","0.00","48.04","288.24","(0.00)","288.24"
+"HVAC","DWELLING","","Dwelling Totals:","","","0.00","90.10","540.63","","540.63"
+"HVAC","DWELLING","","Totals:  HVAC","","","0.00","90.10","540.63","0.00","540.63"
+
+
+"Garage","DWELLING","88","R&R Wood window - single hung, 13- 19 sf","2.00","635.01","74.58","268.92","","(0.00)",""
+"Garage","DWELLING","89","Add. charge for a retrofit window, 12- 23 sf - difficult","1.00","186.07","1.08","37.44","224.59","(0.00)","224.59"
+"Garage","DWELLING","99","Haul debris - per pickup truck load - including dump fees OTHER STRUCTURES","0.50","131.74","0.00","13.18","79.05","(0.00)","79.05"
+"Garage","DWELLING","90","R&R Wrap wood window frame & trim with aluminum sheet","2.00","193.93","5.38","78.64","471.88","(0.00)","471.88"
+"Garage","DWELLING","91","Stain & finish wood window sill","33.33","2.22","0.45","14.90","89.34","(0.00)","89.34"
+"Garage","DWELLING","92","Seal & paint window shutters - per side (set)","8.00","24.41","2.93","39.64","237.85","(0.00)","237.85"
+"Garage","DWELLING","93","Siding (Bid Item) verified at  home depot.  $5.00 a piece and there was 38 pieces that had to be replaced.","38.00","5.00","0.00","38.00","228.00","(0.00)","228.00"
+"Garage","DWELLING","94","Prime & paint exterior fascia - wood, 4"- 6" wide","21.17","1.28","0.25","5.48","32.83","(0.00)","32.83"
+"Garage","DWELLING","95","Seal & paint wood siding","772.08","1.05","21.43","166.42","998.53","(0.00)","998.53"
+"Garage","DWELLING","96","R&R Light fixture","1.00","70.76","2.48","14.64","87.88","(0.00)","87.88"
+"Garage","DWELLING","97","R&R Gutter / downspout - aluminum -","87.00","5.79","13.57","103.46","620.76","(0.00)","620.76"
+"Garage","DWELLING","98","Finish post/wood beam 6" x 6" - 1 coat urethane","18.00","3.12","0.89","11.42","68.47","(0.00)","68.47"
+"Garage","DWELLING","","Dwelling Totals:","","","75.66","319.54","","",""
+"Garage","DWELLING","","Other Structures Totals:","","","47.38","472.60","","",""
+
+
+"Personal Property","CONTENTS","100","Barbecue grill - Gas","1.00","400.00","30.00","0.00","430.00","(0.00)","430.00"
+"Personal Property","CONTENTS","101","Swivel Chair found at homedepot- Hampton Bay Statesville Padded Sling Patio Lounge Chair","1.00","249.00","0.00","0.00","249.00","(0.00)","249.00"
+"Personal Property","CONTENTS","102","Slide and swing http://www.homedepot.com/p/Swing-N-Slide-Playsets-Do-It-Yourself-One-Hour-Custom-Play-Set-TB-1275/203716073","1.00","99.97","0.00","0.00","99.97","(0.00)","99.97"
+"Personal Property","CONTENTS","103","Fairy Playhouse, 47560","1.00","133.99","10.05","0.00","144.04","(0.00)","144.04"
+"Personal Property","CONTENTS","104","Painter - per hour paint bird bath.","1.00","54.59","0.00","0.00","54.59","(0.00)","54.59"
+"Personal Property","CONTENTS","","Contents Totals:","","","40.05","0.00","977.60","","977.60"
+"Personal Property","CONTENTS","","Totals:  Personal Property","","","40.05","0.00","977.60","0.00","977.60"
+
+
+"Labor Minimums Applied","DWELLING","105","Specialty items labor minimum","1.00","143.95","0.00","28.80","172.75","(0.00)","172.75"
+"Labor Minimums Applied","DWELLING","106","Finish carpentry labor minimum","1.00","147.42","0.00","29.48","176.90","(0.00)","176.90"
+"Labor Minimums Applied","DWELLING","107","Heat, vent, & air cond. labor minimum","1.00","60.06","0.00","12.02","72.08","(0.00)","72.08"
+"Labor Minimums Applied","DWELLING","","Dwelling Totals:","","","0.00","70.30","421.73","","421.73"
+"Labor Minimums Applied","DWELLING","","Totals:  Labor Minimums Applied Area Dwelling Total:","","","0.00","70.30","421.73","0.00","421.73"
+"Labor Minimums Applied","DWELLING","","Area Other Structures Total:","","","","","","(278.69)",""
+"Labor Minimums Applied","DWELLING","","Area Contents Total:","","","40.05","0.00","977.60","","977.60"
+
+
