@@ -13,11 +13,20 @@ public:
 
     virtual ~CPdfPage();
 
-    virtual pdf_type GetType() const { return pdf_type::page; }
-    virtual bool operator==(const std::string&) { return false; }
-    virtual const char* c_str() const {
+    pdf_type GetType() const final
+    {
+        return pdf_type::page;
+    }
+    
+    bool operator==(const std::string&) final
+    {
+        return false;
+    }
+
+    const char* c_str() const final
+    {
         return "";
-    };
+    }
 
     std::vector<CPdfFont*> m_Fonts;
     std::vector<std::string> m_Contents;

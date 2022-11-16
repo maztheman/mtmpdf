@@ -9,7 +9,6 @@ namespace fs = std::filesystem;
 
 void DumpText(CPdfDocument* pDocument)
 {
-
     fs::path outDir = pDocument->GetFilename();
 
     auto processedText = processor::pdf::ProcessText(pDocument);
@@ -57,7 +56,13 @@ void DumpText(CPdfDocument* pDocument)
         sJustText += fmt::format("{}", txt.text);
     }
 
-    auto jt = fmt::format("{}_{}.txt", outDir.generic_string(), "jt");
-    std::fstream f(jt, std::ios::out | std::ios::ate);
-    f.write(sJustText.data(), sJustText.size());
+    fs::path newFilename = 
+        outDir.filename().append(fmt::format("_jt"));
+
+    outDir
+        .replace_filename(newFilename)
+        .replace_extension(".txt");
+
+    std::fstream f(outDir, std::ios::out | std::ios::ate);
+    f.write(sJustText.data(), static_cast<std::streamsize>(sJustText.size()));
 }

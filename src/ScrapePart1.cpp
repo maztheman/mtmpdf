@@ -125,7 +125,10 @@ void CScrapePart1::ProcessDocument(CPdfDocument* pDocument)
         if (last_item) {
             auto test_back = last_item->GS.GetUserSpaceMatrix();
             if ((top.y - line_size) <= test_back.y && top.y >= test_back.y) {
-                lines.erase(lines.begin() + lines.size() - 1);
+                if (!lines.empty())
+                {
+                    lines.erase(lines.begin() + static_cast<int64_t>(lines.size()) - 1L);
+                }
                 auto ggg = new processor::pdf::types::TextAtLocation(text);
                 del_temp.push_back(ggg);
                 if (top.x < test_back.x) {
@@ -178,7 +181,6 @@ void CScrapePart1::ProcessDocument(CPdfDocument* pDocument)
     if (paragraph.empty() == false) {
         paragraphs.emplace_back(std::move(paragraph));
     }
-
 
     outDir.replace_extension(".csv");
 

@@ -13,11 +13,20 @@ public:
 
     virtual ~CPdfPages();
     
-    virtual pdf_type GetType() const { return pdf_type::pages; }
-    virtual bool operator==(const std::string&) { return false; }
-    virtual const char* c_str() const {
+    virtual pdf_type GetType() const
+    {
+        return pdf_type::pages;
+    }
+
+    virtual bool operator==(const std::string&)
+    {
+        return false;
+    }
+    
+    virtual const char* c_str() const 
+    {
         return "";
-    };
+    }
 
     void Process();
 

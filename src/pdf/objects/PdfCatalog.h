@@ -13,11 +13,20 @@ public:
     CPdfCatalog(CPdfDocument* pDocument);
     virtual ~CPdfCatalog();
 
-    virtual pdf_type GetType() const { return pdf_type::catalog; }
-    virtual bool operator==(const std::string&) { return false; }
-    virtual const char* c_str() const {
+    pdf_type GetType() const override
+    {
+        return pdf_type::catalog;
+    }
+
+    bool operator==(const std::string&) override
+    {
+        return false;
+    }
+
+    const char* c_str() const override
+    {
         return "";
-    };
+    }
 
     void Process();
     

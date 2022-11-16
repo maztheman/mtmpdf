@@ -76,7 +76,7 @@ static inline bool is_no_data_last_row(const std::vector<std::string>& Row) {
     return true;
 }
 
-bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_data, int& iLastCol)
+bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_data, size_t& iLastCol)
 {
     double dRowY = text_data.GS.TextState.Tm.y * text_data.GS.TextState.Tm.d;
     if (m_State.dHeaderY <= dRowY) {
@@ -89,12 +89,12 @@ bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_
     const auto& text = text_data.text;
 
     auto rect = Measure(text_data.GS, text);
-    int iTbl = match_columns(m_State.columns, m_State.tables, m_State.locked_trade);
+    size_t iTbl = static_cast<size_t>(match_columns(m_State.columns, m_State.tables, m_State.locked_trade));
     auto& tbl = m_State.tables[iTbl];
     //check to see if its text or a number
     if (is_number(text)) {
         //right aligned
-        int iCol = 0;
+        size_t iCol = 0;
         for (auto& col : m_State.columns) {
             bool bMatched = false;
             if (col.has_maybe_rect) {
@@ -122,7 +122,7 @@ bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_
                 if (iCol == (m_State.columns.size() - 1)) {
                     tbl.rows.emplace_back(std::move(m_State.Row));
                     m_State.iRow++;
-                    iLastCol = -1;
+                    iLastCol = ~0UL;
                 } else {
                     iLastCol = iCol;
                 }
@@ -131,7 +131,7 @@ bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_
             iCol++;
         }
     } else {
-        int iCol = 0;
+        size_t iCol = 0;
         for (auto& col : m_State.columns) {
             bool bMatched = false;
             if (col.has_maybe_rect) {
@@ -198,7 +198,7 @@ bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_
                         tbl.rows.emplace_back(std::move(m_State.Row));
                         m_State.iRow++;
                     }
-                    iLastCol = -1;
+                    iLastCol = ~0UL;
                 } else {
                     iLastCol = iCol;
                 }
@@ -231,7 +231,7 @@ bool CPdfToExcel::ProcessRows(const processor::pdf::types::TextAtLocation& text_
                             tbl.rows.emplace_back(std::move(m_State.Row));
                             m_State.iRow++;
                         }
-                        iLastCol = -1;
+                        iLastCol = ~0UL;
                     } else {
                         iLastCol = iCol;
                     }
@@ -323,7 +323,7 @@ void CPdfToExcel::SetupColumns(std::vector<const processor::pdf::types::TextAtLo
         auto test1 = m_State.FindClosestToTopLeft(GS.TextState.Tm.x, GS.TextState.Tm.y, header->nPage);
         auto test2 = m_State.FindClosestToTopRight(GS.TextState.Tm.x, GS.TextState.Tm.y, header->nPage);
 
-        PdfRect maybe_rect{ 0 };
+        PdfRect maybe_rect{ 0.0, 0.0, 0.0, 0.0 };
         bool has_maybe_rect = false;
         bool is_centered = false;
         if (test1 && test2) {
@@ -349,7 +349,7 @@ void CPdfToExcel::TraceBackForTrade(const vector<processor::pdf::types::TextAtLo
 {
     const auto& descr = texts[header_index];
     auto header_y = descr.GS.TextState.Tm.y;
-    for (size_t n = header_index - 1; n != ~0; n--) {
+    for (size_t n = header_index - 1; n != ~0UL; n--) {
         const auto& o = texts[n];
         auto ya = o.GS.TextState.Tm.y;
         if (ya > header_y) {
@@ -526,11 +526,10 @@ void CPdfToExcel::ProcessAllTextNodes(const vector<processor::pdf::types::TextAt
             SetupColumns(header_items);
 
             //Find Rows now
-            int iLastCol = -1;
+            size_t iLastCol = ~0UL;
             size_t nCurrentPage = descr.nPage;
 
             auto this_page_texts = GetThisPagesTextNodes(all_texts, nCurrentPage);
-
 
             double dLineSize = abs(descr.GS.TextState.Tfs * descr.GS.TextState.Tm.d) + 2.0;
             double dFirstLine = descr.GS.TextState.Tm.y;
@@ -551,7 +550,7 @@ void CPdfToExcel::ProcessAllTextNodes(const vector<processor::pdf::types::TextAt
                 if (dLineDiff > (dLineSize * 2.0)) {
                     if (m_State.Row.empty() == false) {
                         if (m_State.Row[0].empty() == false && is_no_data_last_row(m_State.Row) == false) {
-                            int iTbl = match_columns(m_State.columns, m_State.tables, m_State.locked_trade);
+                            size_t iTbl = static_cast<size_t>(match_columns(m_State.columns, m_State.tables, m_State.locked_trade));
                             auto& tbl = m_State.tables[iTbl];
                             tbl.rows.emplace_back(std::move(m_State.Row));
                             m_State.iRow++;

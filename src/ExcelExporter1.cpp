@@ -108,11 +108,13 @@ bool CExcelExporter1::ProcessDocument(CPdfDocument* pDocument)
         sJustText += fmt::format("{}",  txt.text);
     }
 
-    auto jt = fmt::format("{}{}_{}.txt",
-        outPath.parent_path().generic_string(),
-        outPath.filename().generic_string(), "jt");
-    std::fstream f(jt, std::ios::out | std::ios::ate);
-    f.write(sJustText.data(), sJustText.size());
+    auto newFilename = outPath.filename().append("_jt");
+    outPath
+        .replace_filename(newFilename)
+        .replace_extension(".txt");
+
+    std::fstream f(outPath, std::ios::out | std::ios::ate);
+    f.write(sJustText.data(), static_cast<std::streamsize>(sJustText.size()));
 
 
     m_State.vertical_lines = processedText.AllVerticalLines;
@@ -243,20 +245,28 @@ void CExcelExporter1::ProcessAllTextNodes(const vector<processor::pdf::types::Te
                 }
 
                 auto TheCol = GetColumnIndex(cols, text_row.GS.TextState.Tm.x);
-                if (TheCol != ~0) {
-                    if (nLastCol == ~0) {
+                if (TheCol != ~0UL) {
+                    if (nLastCol == ~0UL)
+                    {
                         //last col was null so ignore
-                    } else {
-                        if (TheCol < nLastCol) {
-                            if (m_State.Row.empty() == false) {
+                    }
+                    else
+                    {
+                        if (TheCol < nLastCol)
+                        {
+                            if (m_State.Row.empty() == false)
+                            {
                                 int cnt = 0;
-                                int sensible_ratio = static_cast<int>(m_State.Row.size() * 0.3);
-                                for (auto& gg : m_State.Row) {
-                                    if (gg.empty() == false) {
+                                int sensible_ratio = static_cast<int>(static_cast<double>(m_State.Row.size()) * 0.3);
+                                for (auto& gg : m_State.Row)
+                                {
+                                    if (gg.empty() == false)
+                                    {
                                         cnt++;
                                     }
                                 }
-                                if (cnt > sensible_ratio) {
+                                if (cnt > sensible_ratio)
+                                {
                                     m_State.tables[0].rows.emplace_back(std::move(m_State.Row));
                                 }
                             }

@@ -40,7 +40,7 @@ bool CCSVExporter::ToFile(const std::string& Filename, const std::vector<std::st
     bool rc = true;
     try {
         fstream test(Filename, std::ios::out);
-        test.write(&output[0], output.size());
+        test.write(output.data(), static_cast<std::streamsize>(output.size()));
     } catch (std::exception&) {
         rc = false;
     }
@@ -85,7 +85,7 @@ bool CCSVExporter::ToFile(const std::string& Filename, const CCustomTextState& s
     bool rc = true;
     try {
         fstream test(Filename, std::ios::out);
-        test.write(&output[0], output.size());
+        test.write(output.data(), static_cast<std::streamsize>(output.size()));
     } catch (std::exception&) {
         rc = false;
     }

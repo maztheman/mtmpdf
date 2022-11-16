@@ -15,6 +15,7 @@ CPdfPage::~CPdfPage()
 {
 }
 
+
 /*
 <</Contents 88 0 R/CropBox[0 792 612 0]/MediaBox[0 792 612 0]/Resources<</ProcSet[/PDF/Text/ImageB/ImageC/ImageI]/Font<</F0 89 0 R/F1 90 0 R/F2 91 0 R/F3 92 0 R>>>>/Rotate 0/Type/Page/Parent 81 0 R>>
 

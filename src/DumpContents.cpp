@@ -14,15 +14,17 @@ namespace fs = std::filesystem;
 
 void DumpContents(CPdfDocument* pDocument)
 {
-
     fs::path outDir = pDocument->GetFilename();
-
-	auto pages = pDocument->GetPageContents();
-    size_t pageNum = 0;
-    for (auto&& [pPage, sContents] : pages) {
-        auto fileName = fmt::format("{}_p{}.txt", outDir.generic_string(), pageNum++);
-        std::fstream fi(fileName, std::ios::out | std::ios::ate | std::ios::binary);
-        fi.write(sContents.data(), sContents.size());
+    auto pages = pDocument->GetPageContents();
+    
+    for (size_t pageNum = 0; auto&& [pPage, sContents] : pages) 
+    {
+        fs::path newFilename = outDir.filename().append(fmt::format("_p{}", pageNum++));
+        outDir
+            .replace_filename(newFilename)
+            .replace_extension(".txt");
+        std::fstream fi(outDir, std::ios::out | std::ios::ate | std::ios::binary);
+        fi.write(sContents.data(), static_cast<std::streamsize>(sContents.size()));
     }
 
     CPdfCatalog* pCatalog = static_cast<CPdfCatalog*>(pDocument->GetObjectData("root"));
@@ -32,7 +34,7 @@ void DumpContents(CPdfDocument* pDocument)
             {
                 auto fileName = fmt::format("{}_{}.txt", outDir.generic_string(), *it);
                 std::fstream fi(fileName, std::ios::out | std::ios::ate | std::ios::binary);
-                fi.write(content.data(), content.size());
+                fi.write(content.data(), static_cast<std::streamsize>(content.size()));
             }
             
             for (auto fnd = content.find("CAODC"); fnd != std::string::npos; fnd = content.find("CAODC")) {
@@ -51,9 +53,12 @@ void DumpContents(CPdfDocument* pDocument)
                         dest.resize(pStr->m_OriginalSize, ' ');
                     }
                 }
-                auto fileName = fmt::format("{}_{}_z.txt", outDir.generic_string(), *it);
-                std::fstream fi(fileName, std::ios::out | std::ios::ate | std::ios::binary);
-                fi.write(dest.data(), dest.size());
+                fs::path newFilename = outDir.filename().append(fmt::format("_{}_z", *it));
+                outDir
+                    .replace_filename(newFilename)
+                    .replace_extension(".txt");                
+                std::fstream fi(outDir, std::ios::out | std::ios::ate | std::ios::binary);
+                fi.write(dest.data(), static_cast<std::streamsize>(dest.size()));
             }
 
             InflateData(dest, andback);
