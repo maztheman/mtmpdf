@@ -1,5 +1,10 @@
 #include "tools.h"
 
+#include <ranges>
+#include <algorithm>
+#include <string>
+#include <cctype>
+
 using namespace std;
 
 std::vector<std::string> split_on_space(string value)
@@ -362,3 +367,21 @@ std::string str_from_wstr(const std::vector<wchar_t>& wstr)
     return std::string{wstr.begin(), wstr.end()};
 }
 #endif
+
+char mylower(char c)
+{
+    if (c >= 'A' && c <= 'Z')
+    {
+        c = c | 0x20;
+    }
+    return c;
+}
+
+bool iequals(std::string_view lhs, std::string_view rhs)
+{
+//    constexpr auto to_lower = std::views::transform(std::tolower);
+    return std::ranges::equal(
+        lhs | std::views::transform(mylower),
+        rhs | std::views::transform(mylower)
+    );
+}

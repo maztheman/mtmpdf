@@ -32,7 +32,7 @@ set(SRCS
 
 add_executable(pdf_reader ${SRCS})
 
-target_precompile_headers(pdf_reader PRIVATE <vector> <string> <map> <algorithm> <xlsxwriter.h>)
+target_precompile_headers(pdf_reader PRIVATE <fstream> <vector> <string> <map> <algorithm> <xlsxwriter.h>)
 
 target_link_libraries(
   pdf_reader

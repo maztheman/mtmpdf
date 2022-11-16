@@ -6,6 +6,7 @@
 #include <pdf/objects/PdfCatalog.h>
 #include <pdf/objects/PdfString.h>
 #include <pdf/utils/zlib_helper.h>
+#include <pdf/utils/tools.h>
 
 #include <filesystem>
 

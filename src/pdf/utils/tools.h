@@ -28,3 +28,4 @@ bool is_regular_tag(char c);
 
 std::vector<uint16_t> HexTo16BitArray(std::string hex_string);
 
+bool iequals(std::string_view lhs, std::string_view rhs);

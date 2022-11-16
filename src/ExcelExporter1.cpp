@@ -4,6 +4,11 @@
 
 #include "pdf/objects/PdfDocument.h"
 #include <processor/pdf/Processor.h>
+#include "pdf/utils/tools.h"
+
+#include <filesystem>
+
+namespace fs = std::filesystem;
 
 using namespace std;
 
@@ -11,7 +16,7 @@ static bool TryFindAllDescription(const vector<processor::pdf::types::TextAtLoca
 {
     size_t index = 0;
     for (auto& text : texts) {
-        if (_strnicmp(text.text.c_str(), "description", 11) == 0) {
+        if (iequals(text.text.c_str(), "description") == 0) {
             descrs.push_back(index);
         }
         index++;
@@ -55,17 +60,7 @@ CExcelExporter1::~CExcelExporter1()
 
 bool CExcelExporter1::ProcessDocument(CPdfDocument* pDocument)
 {
-    char drive[8];
-    char dir[280];
-    char name[280];
-    char ext[32];
-
-    _splitpath_s(pDocument->GetFilename().c_str(), drive, dir, name, ext);
-
-    string sOutputFileName;
-    sOutputFileName += drive;
-    sOutputFileName += dir;
-    sOutputFileName += name;
+    fs::path outPath = pDocument->GetFilename();
 
 
     auto processedText = processor::pdf::ProcessText(pDocument);
@@ -113,7 +108,9 @@ bool CExcelExporter1::ProcessDocument(CPdfDocument* pDocument)
         sJustText += fmt::format("{}",  txt.text);
     }
 
-    auto jt = fmt::format("{}_{}.txt", sOutputFileName, "jt");
+    auto jt = fmt::format("{}{}_{}.txt",
+        outPath.parent_path().generic_string(),
+        outPath.filename().generic_string(), "jt");
     std::fstream f(jt, std::ios::out | std::ios::ate);
     f.write(sJustText.data(), sJustText.size());
 
@@ -123,7 +120,6 @@ bool CExcelExporter1::ProcessDocument(CPdfDocument* pDocument)
     
     ProcessAllTextNodes(processedText.AllTexts);
 
-    sOutputFileName += ".xls";
 
 
     return true;

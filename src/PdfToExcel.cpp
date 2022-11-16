@@ -8,6 +8,10 @@
 
 #include <processor/pdf/Processor.h>
 
+#include <filesystem>
+
+namespace fs = std::filesystem;
+
 using namespace std;
 
 
@@ -245,7 +249,7 @@ static bool TryFindAllDescription(const vector<processor::pdf::types::TextAtLoca
 {
     size_t index = 0;
     for (auto& text : texts) {
-        if (_strnicmp(text.text.c_str(), "description", 11) == 0) {
+        if (iequals(text.text.c_str(), "description") == 0) {
             descrs.push_back(index);
         }
         index++;
@@ -361,14 +365,7 @@ void CPdfToExcel::TraceBackForTrade(const vector<processor::pdf::types::TextAtLo
 
 bool CPdfToExcel::ProcessDocument(CPdfDocument* pDocument)
 {
-
-    char drive[8];
-    char dir[280];
-    char name[280];
-    char ext[32];
-
-    _splitpath_s(pDocument->GetFilename().c_str(), drive, dir, name, ext);
-
+    fs::path outPath = pDocument->GetFilename();
 
     auto processedText = processor::pdf::ProcessText(pDocument);
 
@@ -408,14 +405,9 @@ bool CPdfToExcel::ProcessDocument(CPdfDocument* pDocument)
     m_State.media_boxes = pDocument->GetAllMediaBoxes();
     ProcessAllTextNodes(all_texts);
 
-    string sOutputFileName;
-    sOutputFileName += drive;
-    sOutputFileName += dir;
-    sOutputFileName += name;
-    sOutputFileName += ".xls";
+    outPath.replace_extension(".xls");
 
-
-    return CExcelExporter::ToFile(sOutputFileName, m_State);
+    return CExcelExporter::ToFile(outPath.generic_string(), m_State);
 }
 
 const processor::pdf::types::TextAtLocation* FindNextTradeItem(const vector<processor::pdf::types::TextAtLocation>& all_texts, size_t first, size_t last)

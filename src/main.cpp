@@ -27,7 +27,7 @@ public:
     file_data(string fn)
         : m_pData(nullptr)
     {
-        fopen_s(&m_pData, fn.c_str(), "rb");
+        m_pData = fopen(fn.c_str(), "rb");
     }
 
     ~file_data()
