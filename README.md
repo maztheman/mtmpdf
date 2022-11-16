@@ -2,4 +2,4 @@
 
 PDF Dumper.
 
-does not compile atm. This used to be a windows only program.
+Contains a simple pdf library and a example application.
